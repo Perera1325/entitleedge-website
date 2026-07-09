@@ -10,10 +10,6 @@ export const metadata = {
 };
 
 export default function IndustriesPage() {
-  const PlaceholderIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle></svg>
-  );
-
   return (
     <>
       <Section background="dark" style={{ padding: '6rem 0' }}>
@@ -29,44 +25,49 @@ export default function IndustriesPage() {
         <div className="container">
           <div className={styles.grid3} style={{ alignItems: 'stretch' }}>
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_roads.png"
               title="Roads & Highways"
               description="Programme, reporting, delay tracking, recovery programmes and EOT support for road and highway projects."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_rail.png"
               title="Rail"
               description="Programme controls, possession planning support, delay analysis and claims support for rail networks."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_utilities.png"
               title="Utilities"
               description="Water, power, gas, comms and utility interface works where delays and access constraints are common."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_airports.png"
               title="Airports"
               description="Staged works, access constraints, operational interfaces and stakeholder reporting."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_marine.png"
               title="Marine"
               description="Ports, waterfront works and marine infrastructure planning and commercial support."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_buildings.png"
               title="Buildings"
               description="Sequencing, contract admin and commercial support for building contractors and subcontractors."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_water.png"
               title="Water Infrastructure"
               description="Project controls and delay tracking for treatment, pipelines and pump stations."
             />
             <IconCard 
-              icon={<PlaceholderIcon />}
+              imageSrc="/images/industry_recovery.png"
               title="Recovery Works"
               description="Fast-moving controls and reporting for emergency and resilience programmes."
+            />
+            <IconCard 
+              imageSrc="/images/industry_geotechnical.png"
+              title="Geotechnical"
+              description="Earthworks, piling, retaining structures and subsurface engineering project controls."
             />
           </div>
         </div>

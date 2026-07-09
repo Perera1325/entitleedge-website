@@ -40,7 +40,7 @@ export default function Home() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Button href="/contact" variant="primary">Book a 20-Minute Intro Call</Button>
-              <Button href="/docs/Capability_Statement.docx" variant="light" download>Download Capability Statement</Button>
+              <Button href="/docs/Capability_Statement.pdf" variant="light" download>Download Capability Statement</Button>
             </div>
           </div>
         </div>
@@ -134,9 +134,8 @@ export default function Home() {
           <div className={styles.grid2}>
             <Card style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
-                <div className={styles.founderAvatar}></div>
                 <div>
-                  <h4>Taarish Punwani</h4>
+                  <h4>Narotum Dharamdas</h4>
                   <p className={styles.founderRole}>Project Controls & Commercial Specialist</p>
                   <p style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginBottom: 0 }}>
                     Infrastructure project controls, forecasting, cost control, governance reporting and Power BI.
@@ -146,10 +145,9 @@ export default function Home() {
             </Card>
             <Card style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
-                <div className={styles.founderAvatar}></div>
                 <div>
                   <h4>Ashan B</h4>
-                  <p className={styles.founderRole}>Project Controls & QS Specialist</p>
+                  <p className={styles.founderRole}>Planning Delay Expert & QS Specialist</p>
                   <p style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginBottom: 0 }}>
                     Planning, Primavera P6, delay analysis, EOT claims, QS and contract administration.
                   </p>
@@ -169,7 +167,7 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button href="/contact" variant="primary">Book an Intro Call</Button>
-            <Button href="/docs/Capability_Statement.docx" variant="light" download>Download Capability Statement</Button>
+            <Button href="/docs/Capability_Statement.pdf" variant="light" download>Download Capability Statement</Button>
           </div>
         </div>
       </Section>

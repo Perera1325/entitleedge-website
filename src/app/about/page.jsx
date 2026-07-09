@@ -29,9 +29,8 @@ export default function AboutPage() {
           <div className={styles.grid2} style={{ alignItems: 'stretch' }}>
             <Card style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                <div className={styles.founderAvatar}></div>
                 <div>
-                  <h3 style={{ margin: 0 }}>Taarish Punwani</h3>
+                  <h3 style={{ margin: 0 }}>Narotum Dharamdas</h3>
                   <p className={styles.founderRole}>Project Controls & Commercial Specialist</p>
                 </div>
               </div>
@@ -47,10 +46,9 @@ export default function AboutPage() {
 
             <Card style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                <div className={styles.founderAvatar}></div>
                 <div>
                   <h3 style={{ margin: 0 }}>Ashan B</h3>
-                  <p className={styles.founderRole}>Project Controls, Commercial & QS Specialist</p>
+                  <p className={styles.founderRole}>Planning Delay Expert & QS Specialist</p>
                 </div>
               </div>
               <ul style={{ listStyleType: 'none', paddingLeft: 0, color: 'var(--secondary)', fontSize: '0.95rem' }}>

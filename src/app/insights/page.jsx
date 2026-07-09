@@ -67,7 +67,7 @@ export default function InsightsPage() {
             Enter your email to receive the PDF. Do not add users to a mailing list without permission.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Button href="/docs/Capability_Statement.docx" variant="primary" download>Download DOCX</Button>
+            <Button href="/docs/Capability_Statement.pdf" variant="primary" download>Download PDF</Button>
           </div>
         </div>
       </Section>
