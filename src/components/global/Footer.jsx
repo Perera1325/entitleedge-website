@@ -39,6 +39,7 @@ export default function Footer() {
               <li><Link href="/industries">Utilities</Link></li>
               <li><Link href="/industries">Airports</Link></li>
               <li><Link href="/industries">Buildings</Link></li>
+              <li><Link href="/industries">Geotechnical</Link></li>
             </ul>
           </div>
           
