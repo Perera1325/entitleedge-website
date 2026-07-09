@@ -48,7 +48,7 @@ export default function AboutPage() {
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                 <div>
                   <h3 style={{ margin: 0 }}>Ashan B</h3>
-                  <p className={styles.founderRole}>Planning Delay Expert & QS Specialist</p>
+                  <p className={styles.founderRole}>Planning, Delay & QS Specialist</p>
                 </div>
               </div>
               <ul style={{ listStyleType: 'none', paddingLeft: 0, color: 'var(--secondary)', fontSize: '0.95rem' }}>

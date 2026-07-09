@@ -147,7 +147,7 @@ export default function Home() {
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 <div>
                   <h4>Ashan B</h4>
-                  <p className={styles.founderRole}>Planning Delay Expert & QS Specialist</p>
+                  <p className={styles.founderRole}>Planning, Delay & QS Specialist</p>
                   <p style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginBottom: 0 }}>
                     Planning, Primavera P6, delay analysis, EOT claims, QS and contract administration.
                   </p>
