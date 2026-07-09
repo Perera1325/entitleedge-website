@@ -1,0 +1,90 @@
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.heroVisual {
+  background: rgba(255,255,255,0.05); 
+  border: 1px solid rgba(255,255,255,0.1); 
+  border-radius: 12px; 
+  padding: 2rem; 
+  width: 100%; 
+  max-width: 500px; 
+  backdrop-filter: blur(10px);
+}
+
+.heroLines {
+  height: 200px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  gap: 1rem;
+}
+
+.heroLineAccent {
+  height: 12px; 
+  background: var(--accent); 
+  border-radius: 6px; 
+  opacity: 0.8;
+}
+
+.heroLineSection {
+  height: 12px; 
+  background: var(--section); 
+  border-radius: 6px; 
+  opacity: 0.4;
+}
+
+.founderAvatar {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  background: var(--section); 
+  border: 2px solid var(--primary); 
+  flex-shrink: 0;
+}
+
+.founderRole {
+  color: var(--accent); 
+  font-size: 0.875rem; 
+  font-weight: 600; 
+  margin-bottom: 0.5rem; 
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 992px) {
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+  .grid3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid4, .grid3, .grid2 { grid-template-columns: 1fr; }
+}
+
+.imageContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.imageZoom {
+  transition: transform var(--transition-normal) !important;
+}
+
+.imageContainer:hover .imageZoom {
+  transform: scale(1.08) !important;
+}

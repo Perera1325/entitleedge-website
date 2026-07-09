@@ -1,0 +1,93 @@
+:root {
+  /* Brand Colors */
+  --primary: #0B1F33; /* Deep navy */
+  --secondary: #2E343B; /* Charcoal */
+  --background: #F7F8FA; /* Warm white */
+  --section: #E8EEF3; /* Light steel blue/grey */
+  --accent: #D99A2B; /* Construction amber */
+  --text: #151A1F; /* Near black */
+  --white: #FFFFFF;
+  
+  /* Gradients */
+  --primary-gradient: linear-gradient(135deg, var(--primary) 0%, #1a3a5c 100%);
+  --accent-gradient: linear-gradient(135deg, var(--accent) 0%, #f0ae3a 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 12px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 12px 30px -4px rgba(0, 0, 0, 0.08), 0 8px 12px -4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.15), 0 16px 24px -12px rgba(0, 0, 0, 0.06);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 17px; /* A11y baseline for desktop */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
+h4 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+p { margin-bottom: 1.5rem; }
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* A11y specific */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mobile responsive resets */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* A11y baseline for mobile */
+  }
+}

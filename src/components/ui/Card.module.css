@@ -1,0 +1,36 @@
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  border-color: rgba(0,0,0,0.1);
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--section);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.cardIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.borderTopPrimary { border-top: 4px solid var(--primary); }
+.borderTopAccent { border-top: 4px solid var(--accent); }
+.borderTopSection { border-top: 4px solid var(--section); }

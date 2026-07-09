@@ -1,0 +1,79 @@
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.formControl {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--background);
+  color: var(--text);
+  transition: all var(--transition-fast);
+}
+
+.formControl:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217, 154, 43, 0.2);
+  background: var(--white);
+}
+
+.formControl::placeholder {
+  color: rgba(0,0,0,0.4);
+}
+
+.errorText {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.successMessage {
+  padding: 3rem 2rem;
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.infoCard {
+  background: var(--primary);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.infoCard p {
+  color: rgba(255,255,255,0.7);
+}
+
+.enquiryTypes {
+  background: var(--section);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.enquiryTypes ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.enquiryTypes li {
+  margin-bottom: 0.5rem;
+}
