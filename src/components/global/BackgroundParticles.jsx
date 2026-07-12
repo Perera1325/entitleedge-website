@@ -25,8 +25,8 @@ export default function BackgroundParticles() {
             },
             modes: {
               grab: {
-                distance: 200,
-                links: { opacity: 0.6, color: "#d99a2b" }
+                distance: 250,
+                links: { opacity: 0.8, color: "#d99a2b" }
               }
             },
           },
@@ -34,26 +34,33 @@ export default function BackgroundParticles() {
             color: { value: "#d99a2b" },
             links: {
               color: "#d99a2b",
-              distance: 150,
+              distance: 180,
               enable: true,
-              opacity: 0.2,
-              width: 1,
+              opacity: 0.25,
+              width: 1.5,
+              triangles: {
+                enable: true,
+                opacity: 0.05
+              }
             },
             move: {
               direction: "none",
               enable: true,
               outModes: { default: "bounce" },
               random: false,
-              speed: 1,
-              straight: false,
+              speed: 0.8,
+              straight: true,
             },
             number: {
               density: { enable: true, area: 1000 },
-              value: 50,
+              value: 65,
             },
-            opacity: { value: 0.4 },
-            shape: { type: "circle" },
-            size: { value: { min: 1, max: 3 } },
+            opacity: { value: 0.6 },
+            shape: { 
+              type: ["triangle", "square", "polygon"],
+              polygon: { sides: 6 }
+            },
+            size: { value: { min: 2, max: 4 } },
           },
           detectRetina: true,
         }}
