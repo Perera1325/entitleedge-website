@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/global/Header";
 import Footer from "../components/global/Footer";
 import BackgroundParticles from "../components/global/BackgroundParticles";
+import SmoothScroll from "../components/global/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -15,10 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${inter.className}`}>
-        <BackgroundParticles />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <BackgroundParticles />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

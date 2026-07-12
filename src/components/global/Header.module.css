@@ -15,6 +15,17 @@
   box-shadow: var(--shadow-sm);
 }
 
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform-origin: left;
+  z-index: 1001;
+}
+
 .headerContainer {
   display: flex;
   justify-content: space-between;

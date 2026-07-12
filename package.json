@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
+    "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^12.42.2",
+    "lenis": "^1.3.25",
     "next": "16.2.10",
     "nodemailer": "^9.0.3",
     "prisma": "^5.22.0",

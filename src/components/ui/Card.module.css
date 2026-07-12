@@ -3,15 +3,15 @@
   border-radius: 16px;
   padding: 2.5rem;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
   border: 1px solid rgba(0,0,0,0.05);
   height: 100%;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-8px);
-  border-color: rgba(0,0,0,0.1);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(217, 154, 43, 0.25);
 }
 
 .cardIcon {

@@ -7,29 +7,43 @@
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  transition: all var(--transition-normal);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, color 0.3s ease-out;
   border: 2px solid transparent;
   text-align: center;
   text-decoration: none;
 }
 
 .btn:active {
-  transform: scale(0.98);
+  transform: scale(0.97) !important;
 }
 
+/* ── Primary ── */
 .primary {
   background: var(--accent-gradient);
   color: var(--primary);
   box-shadow: var(--shadow-sm);
+  animation: pulseGlow 2.8s ease-in-out infinite;
 }
 
 .primary:hover {
   background: var(--accent);
   color: var(--primary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 28px -4px rgba(217, 154, 43, 0.45);
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.06);
+  animation: none; /* pause pulse on hover */
 }
 
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 12px -2px rgba(217, 154, 43, 0.08);
+  }
+  50% {
+    box-shadow: 0 4px 20px 0px rgba(217, 154, 43, 0.38);
+  }
+}
+
+/* ── Secondary ── */
 .secondary {
   background-color: transparent;
   color: var(--primary);
@@ -39,8 +53,10 @@
 .secondary:hover {
   background-color: var(--primary);
   color: var(--white);
+  transform: translateY(-2px) scale(1.02);
 }
 
+/* ── Light ── */
 .light {
   background-color: var(--white);
   color: var(--primary);
@@ -50,6 +66,7 @@
   background-color: transparent;
   color: var(--white);
   border-color: var(--white);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .fullWidth {
