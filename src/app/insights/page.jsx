@@ -15,17 +15,20 @@ export default function InsightsPage() {
     {
       title: "Why Contractors Lose EOT Claims",
       summary: "Most EOT claims fail because the contractor cannot prove cause, effect and critical path impact.",
-      image: "/images/05_Insights_Construction_Oversight.png"
+      image: "/images/05_Insights_Construction_Oversight.png",
+      url: "/docs/why-contractors-lose-eot-claims.pdf"
     },
     {
       title: "The Hidden Cost of Not Updating Your Programme",
       summary: "An outdated programme weakens reporting, recovery planning and entitlement.",
-      image: "/images/06_Insights_Delay_Risk_Theme.png"
+      image: "/images/06_Insights_Delay_Risk_Theme.png",
+      url: "/docs/hidden-cost-of-not-updating-programme.pdf"
     },
     {
       title: "When Should a Contractor Bring in Planning or Claims Support?",
       summary: "Early support is usually cheaper than trying to rebuild evidence at the end of the project.",
-      image: "/images/07_Insights_Infrastructure_Progress.png"
+      image: "/images/07_Insights_Infrastructure_Progress.png",
+      url: "/docs/when-should-contractor-bring-in-planning-or-claims-support.pdf"
     }
   ];
 
@@ -52,7 +55,7 @@ export default function InsightsPage() {
                 <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                   <h4 style={{ marginBottom: '1rem' }}>{article.title}</h4>
                   <p style={{ color: 'var(--secondary)', fontSize: '0.95rem', flexGrow: 1 }}>{article.summary}</p>
-                  <a href="#" style={{ color: 'var(--accent)', fontWeight: 600, marginTop: '1rem', display: 'inline-block' }}>Read article -&gt;</a>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', fontWeight: 600, marginTop: '1rem', display: 'inline-block' }}>Read article -&gt;</a>
                 </div>
               </Card>
             ))}
