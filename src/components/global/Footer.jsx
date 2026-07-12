@@ -56,8 +56,8 @@ export default function Footer() {
         <div className={styles.footerBottom}>
           <p>&copy; 2026 EntitleEdge Advisory. All rights reserved.</p>
           <div className={styles.footerBottomLinks}>
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms of Service</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-of-service">Terms of Service</Link>
           </div>
         </div>
       </div>

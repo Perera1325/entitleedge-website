@@ -1,0 +1,82 @@
+.legalLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .legalLayout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .stickyToc {
+    position: sticky;
+    top: 6rem;
+    padding: 1.5rem;
+    background-color: var(--background);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tocList a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  display: block;
+}
+
+.tocList a:hover {
+  color: var(--accent);
+}
+
+.content {
+  flex: 3;
+  max-width: 800px;
+}
+
+.legalSection {
+  margin-bottom: 3rem;
+  scroll-margin-top: 6rem;
+}
+
+.legalSection h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.legalSection p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.legalSection ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.legalSection li {
+  margin-bottom: 0.5rem;
+}
