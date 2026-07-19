@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import styles from './Header.module.css';
@@ -35,11 +36,16 @@ export default function Header() {
       <motion.div className={styles.progressBar} style={{ scaleX }} />
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-            <polyline points="2 17 12 22 22 17"></polyline>
-            <polyline points="2 12 12 17 22 12"></polyline>
-          </svg>
+          <div className={styles.logoCircle}>
+            <Image
+              src="/logo-circle.png"
+              alt="EntitleEdge Advisory Logo"
+              width={44}
+              height={44}
+              className={styles.logoImg}
+              priority
+            />
+          </div>
           EntitleEdge <span>Advisory</span>
         </Link>
         

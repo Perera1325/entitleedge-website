@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -8,12 +9,16 @@ export default function Footer() {
       <div className="container">
         <div className={styles.footerGrid}>
           <div className={styles.footerCol}>
-            <Link href="/" className="logo" style={{ color: 'var(--white)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.5rem', fontWeight: 800 }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
+            <Link href="/" className="logo" style={{ color: 'var(--white)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '1.5rem', fontWeight: 800 }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '2px solid rgba(255,255,255,0.25)', boxShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+                <Image
+                  src="/logo-circle.png"
+                  alt="EntitleEdge Advisory Logo"
+                  width={44}
+                  height={44}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
               EntitleEdge <span style={{ color: 'var(--accent)' }}>Advisory</span>
             </Link>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', maxWidth: '300px' }}>
