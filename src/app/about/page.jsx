@@ -1,12 +1,11 @@
-"use client";
 import React from 'react';
-import { motion } from 'framer-motion';
 import Section from '../../components/ui/Section';
 import Card from '../../components/ui/Card';
+import Button from '../../components/ui/Button';
 import FadeIn from '../../components/ui/FadeIn';
 import { StaggerContainer, StaggerItem } from '../../components/ui/StaggerChildren';
 import AnimatedBackground from '../../components/ui/AnimatedBackground';
-import Button from '../../components/ui/Button';
+import { PageHero } from '../../components/ui/PageHero';
 import styles from '../page.module.css';
 
 export const metadata = {
@@ -56,35 +55,18 @@ export default function AboutPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <Section background="dark" style={{ padding: '7rem 0 6rem', position: 'relative', overflow: 'hidden' }}>
-        <AnimatedBackground variant="orbs" theme="dark" />
-        {/* Diagonal accent stripe */}
-        <div style={{
-          position: 'absolute', top: 0, right: 0, bottom: 0, width: '40%',
-          background: 'linear-gradient(to left, rgba(217,154,43,0.04) 0%, transparent 100%)',
-          pointerEvents: 'none',
-        }} />
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.div
-            initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }}
-            style={{ display: 'inline-block', padding: '0.4rem 1rem', background: 'rgba(217,154,43,0.12)', border: '1px solid var(--accent)', borderRadius: '50px', color: 'var(--accent)', fontWeight: 600, marginBottom: '1.5rem', fontSize: '0.8rem', letterSpacing: '1.5px', textTransform: 'uppercase' }}
-          >
-            Who We Are
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ marginBottom: '1.5rem', color: 'var(--white)', maxWidth: '750px', lineHeight: 1.15 }}
-          >
-            A specialist team focused on programme, entitlement and commercial outcomes.
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.35 }}
-            style={{ fontSize: '1.125rem', opacity: 0.85, color: 'var(--white)', maxWidth: '600px' }}
-          >
-            Boutique support for contractors who need senior capability without full-time overhead.
-          </motion.p>
-        </div>
-      </Section>
+      <PageHero
+        badge="Who We Are"
+        title="A specialist team focused on programme, entitlement and commercial outcomes."
+        subtitle="Boutique support for contractors who need senior capability without full-time overhead."
+        extra={
+          <div style={{
+            position: 'absolute', top: 0, right: 0, bottom: 0, width: '40%',
+            background: 'linear-gradient(to left, rgba(217,154,43,0.04) 0%, transparent 100%)',
+            pointerEvents: 'none',
+          }} />
+        }
+      />
 
       {/* ─── Mission Statement ─── */}
       <Section background="white" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -125,21 +107,7 @@ export default function AboutPage() {
           <StaggerContainer className={styles.grid2} style={{ alignItems: 'stretch' }}>
             {team.map((member, i) => (
               <StaggerItem key={i}>
-                <div style={{
-                  background: 'var(--white)',
-                  borderRadius: '20px',
-                  padding: '2.5rem',
-                  boxShadow: '0 8px 30px rgba(11,31,51,0.07)',
-                  border: '1px solid rgba(11,31,51,0.06)',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  cursor: 'default',
-                  height: '100%',
-                  display: 'flex', flexDirection: 'column',
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(11,31,51,0.14)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(11,31,51,0.07)'; }}
-                >
-                  {/* Avatar */}
+                <Card style={{ height: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', padding: '2.5rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
                     <div style={{
                       width: '64px', height: '64px', borderRadius: '50%',
@@ -156,9 +124,7 @@ export default function AboutPage() {
                       <p style={{ margin: 0, color: 'var(--accent)', fontSize: '0.875rem', fontWeight: 600 }}>{member.role}</p>
                     </div>
                   </div>
-                  {/* Divider */}
                   <div style={{ height: '1px', background: 'linear-gradient(to right, var(--accent), transparent)', marginBottom: '1.5rem', opacity: 0.4 }} />
-                  {/* Skills */}
                   <ul style={{ listStyleType: 'none', paddingLeft: 0, color: 'var(--secondary)', fontSize: '0.9rem', flex: 1 }}>
                     {member.skills.map((sk, j) => (
                       <li key={j} style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -166,7 +132,7 @@ export default function AboutPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Card>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -187,21 +153,11 @@ export default function AboutPage() {
           <StaggerContainer style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
             {values.map((v, i) => (
               <StaggerItem key={i}>
-                <div style={{
-                  background: 'var(--white)', borderRadius: '16px',
-                  padding: '2rem 1.5rem',
-                  boxShadow: '0 4px 20px rgba(11,31,51,0.06)',
-                  border: '1px solid rgba(11,31,51,0.05)',
-                  textAlign: 'center',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(11,31,51,0.12)'; e.currentTarget.style.borderColor = 'rgba(217,154,43,0.3)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 4px 20px rgba(11,31,51,0.06)'; e.currentTarget.style.borderColor = 'rgba(11,31,51,0.05)'; }}
-                >
+                <Card style={{ textAlign: 'center', padding: '2rem 1.5rem' }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1rem', animation: `floatUp ${3 + i * 0.5}s ease-in-out infinite`, animationDelay: `${i * 0.4}s` }}>{v.icon}</div>
                   <h4 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>{v.title}</h4>
                   <p style={{ color: 'var(--secondary)', fontSize: '0.875rem', marginBottom: 0 }}>{v.desc}</p>
-                </div>
+                </Card>
               </StaggerItem>
             ))}
           </StaggerContainer>
