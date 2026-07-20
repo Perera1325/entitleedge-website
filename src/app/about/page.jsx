@@ -30,7 +30,7 @@ const team = [
     ],
   },
   {
-    name: "Ashan B",
+    name: "Ash B",
     role: "Planning, Delay & QS Specialist",
     color: "#1a3a5c",
     initials: "AB",
