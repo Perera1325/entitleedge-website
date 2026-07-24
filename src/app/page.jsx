@@ -213,42 +213,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ─── Founder Credibility ─── */}
-      <Section background="light">
-        <div className="container">
-          <FadeIn>
-            <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Led by project controls, commercial and claims specialists.</h2>
-          </FadeIn>
-          <StaggerContainer className={styles.grid2}>
-            <StaggerItem>
-              <Card style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
-                  <div>
-                    <h4>Narotum Dharamdas</h4>
-                    <p className={styles.founderRole}>Project Controls &amp; Commercial Specialist</p>
-                    <p style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginBottom: 0 }}>
-                      Infrastructure project controls, forecasting, cost control, governance reporting and Power BI.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </StaggerItem>
-            <StaggerItem>
-              <Card style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
-                  <div>
-                    <h4>Ash B</h4>
-                    <p className={styles.founderRole}>Planning, Delay &amp; QS Specialist</p>
-                    <p style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginBottom: 0 }}>
-                      Planning, Primavera P6, delay analysis, EOT claims, QS and contract administration.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </StaggerItem>
-          </StaggerContainer>
-        </div>
-      </Section>
+
 
       {/* ─── Final CTA ─── */}
       <Section background="dark" style={{ textAlign: 'center', padding: '8rem 0' }}>

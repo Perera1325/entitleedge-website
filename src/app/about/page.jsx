@@ -1,11 +1,11 @@
 import React from 'react';
 import Section from '../../components/ui/Section';
-import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 import FadeIn from '../../components/ui/FadeIn';
 import { StaggerContainer, StaggerItem } from '../../components/ui/StaggerChildren';
 import AnimatedBackground from '../../components/ui/AnimatedBackground';
 import { PageHero } from '../../components/ui/PageHero';
+import Card from '../../components/ui/Card';
 import styles from '../page.module.css';
 
 export const metadata = {
@@ -13,36 +13,7 @@ export const metadata = {
   description: "A specialist team focused on programme, entitlement and commercial outcomes. Boutique support for contractors who need senior capability without full-time overhead.",
 };
 
-const team = [
-  {
-    name: "Narotum Dharamdas",
-    role: "Project Controls & Commercial Specialist",
-    color: "#D99A2B",
-    initials: "ND",
-    skills: [
-      "Infrastructure project controls",
-      "Forecasting and cost control",
-      "Governance and executive reporting",
-      "JV reporting and invoicing",
-      "Power BI dashboards",
-      "Commercial management",
-    ],
-  },
-  {
-    name: "Ash B",
-    role: "Planning, Delay & QS Specialist",
-    color: "#1a3a5c",
-    initials: "AB",
-    skills: [
-      "10+ years international experience",
-      "Primavera P6 and planning",
-      "Critical path analysis",
-      "Delay analysis and EOT claims",
-      "Quantity surveying",
-      "Contract administration",
-    ],
-  },
-];
+
 
 const values = [
   { icon: "🎯", title: "Practical", desc: "Outputs project teams can actually use." },
@@ -93,51 +64,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* ─── Team ─── */}
-      <Section background="light" style={{ position: 'relative', overflow: 'hidden' }}>
-        <AnimatedBackground variant="dots" theme="light" />
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <FadeIn>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
-              <div style={{ width: '40px', height: '3px', background: 'var(--accent)', borderRadius: '2px' }} />
-              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 700 }}>The Team</span>
-            </div>
-            <h2 style={{ marginBottom: '3rem' }}>Meet the specialists</h2>
-          </FadeIn>
-          <StaggerContainer className={styles.grid2} style={{ alignItems: 'stretch' }}>
-            {team.map((member, i) => (
-              <StaggerItem key={i}>
-                <Card style={{ height: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px', padding: '2.5rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
-                    <div style={{
-                      width: '64px', height: '64px', borderRadius: '50%',
-                      background: `linear-gradient(135deg, ${member.color} 0%, ${member.color}88 100%)`,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '1.4rem', fontWeight: 800, color: '#fff',
-                      flexShrink: 0,
-                      boxShadow: `0 6px 20px ${member.color}40`,
-                    }}>
-                      {member.initials}
-                    </div>
-                    <div>
-                      <h3 style={{ margin: 0, fontSize: '1.2rem' }}>{member.name}</h3>
-                      <p style={{ margin: 0, color: 'var(--accent)', fontSize: '0.875rem', fontWeight: 600 }}>{member.role}</p>
-                    </div>
-                  </div>
-                  <div style={{ height: '1px', background: 'linear-gradient(to right, var(--accent), transparent)', marginBottom: '1.5rem', opacity: 0.4 }} />
-                  <ul style={{ listStyleType: 'none', paddingLeft: 0, color: 'var(--secondary)', fontSize: '0.9rem', flex: 1 }}>
-                    {member.skills.map((sk, j) => (
-                      <li key={j} style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <span style={{ color: 'var(--accent)', fontSize: '0.7rem' }}>▸</span> {sk}
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </Section>
+
 
       {/* ─── Values ─── */}
       <Section background="white" style={{ position: 'relative', overflow: 'hidden' }}>
