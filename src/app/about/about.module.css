@@ -1,0 +1,403 @@
+/* ─── Profile Card Outer Container ─────────────────────────────────────── */
+.profileCardOuter {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: 3px;                       /* border-gradient trick */
+  background: linear-gradient(135deg, #D99A2B 0%, #1a3a5c 50%, #D99A2B 100%);
+  background-size: 200% 200%;
+  animation: borderShimmer 4s linear infinite;
+  box-shadow:
+    0 30px 70px rgba(11, 31, 51, 0.18),
+    0 0 0 1px rgba(217, 154, 43, 0.15);
+}
+
+@keyframes borderShimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Inner Card ─────────────────────────────────────────────────────────── */
+.profileCardInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 26px;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+/* ─── Floating Orbs ──────────────────────────────────────────────────────── */
+.orb1, .orb2, .orb3 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb1 {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(217,154,43,0.08) 0%, transparent 70%);
+  animation: orbDrift1 10s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: 200px;
+  background: radial-gradient(circle, rgba(26,58,92,0.06) 0%, transparent 70%);
+  animation: orbDrift2 13s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 150px;
+  height: 150px;
+  top: 40px;
+  left: -40px;
+  background: radial-gradient(circle, rgba(217,154,43,0.05) 0%, transparent 70%);
+  animation: orbDrift3 8s ease-in-out infinite;
+}
+
+@keyframes orbDrift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(-20px, 20px) scale(1.05); }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(15px, -15px) scale(0.95); }
+}
+
+@keyframes orbDrift3 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(10px, 10px); }
+}
+
+/* ─── Photo Column ───────────────────────────────────────────────────────── */
+.photoCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Animated Photo Frame ───────────────────────────────────────────────── */
+.photoFrame {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.photoRing {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #D99A2B, #1a3a5c, #D99A2B) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: ringRotate 6s linear infinite;
+}
+
+.photoRing2 {
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(217, 154, 43, 0.25);
+  animation: ringRotate 10s linear infinite reverse;
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.photoWrapper {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow:
+    0 12px 40px rgba(11,31,51,0.18),
+    0 0 0 3px rgba(217,154,43,0.2);
+  animation: photoFloat 6s ease-in-out infinite;
+}
+
+@keyframes photoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ─── Available Badge ─────────────────────────────────────────────────────── */
+.availableBadge {
+  position: absolute;
+  bottom: 6px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #0B1F33;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  animation: badgePop 2s ease-in-out infinite;
+}
+
+@keyframes badgePop {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.04); }
+}
+
+.availableDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%       { opacity: 0.8; box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+}
+
+/* ─── Credential Badges ───────────────────────────────────────────────────── */
+.credentialBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.credBadge {
+  background: linear-gradient(135deg, #0B1F33 0%, #1a3a5c 100%);
+  color: #D99A2B;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  border: 1px solid rgba(217,154,43,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credBadge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217,154,43,0.3);
+}
+
+/* ─── Details Column ─────────────────────────────────────────────────────── */
+.detailsCol {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Name Block ─────────────────────────────────────────────────────────── */
+.nameBlock {
+  margin-bottom: 1.25rem;
+}
+
+.name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0B1F33;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.5px;
+}
+
+.titleTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.titleTag {
+  background: linear-gradient(135deg, #D99A2B 0%, #e8b34b 100%);
+  color: #0B1F33;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.titleTagSecondary {
+  background: #f0f4f8;
+  color: #1a3a5c;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(26,58,92,0.15);
+}
+
+/* ─── Divider ────────────────────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, #D99A2B, transparent);
+  margin-bottom: 1.25rem;
+  opacity: 0.5;
+}
+
+/* ─── Bio ────────────────────────────────────────────────────────────────── */
+.bio {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Skill Grid ─────────────────────────────────────────────────────────── */
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 8px;
+  margin-bottom: 1.75rem;
+}
+
+.skillChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid rgba(11,31,51,0.08);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  color: #1a3a5c;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skillChip:hover {
+  background: linear-gradient(135deg, rgba(217,154,43,0.08) 0%, rgba(26,58,92,0.05) 100%);
+  border-color: rgba(217,154,43,0.4);
+  transform: translateX(3px);
+}
+
+.skillIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ─── Stats Row ──────────────────────────────────────────────────────────── */
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: linear-gradient(135deg, #0B1F33 0%, #1a3a5c 100%);
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.statsRow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(217,154,43,0.05) 0%, transparent 60%);
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.statNum {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #D99A2B;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+  margin: 0 1rem;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .profileCardInner {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .photoCol {
+    width: 100%;
+  }
+
+  .statsRow {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .statDivider {
+    display: none;
+  }
+
+  .skillGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .name {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .titleTags {
+    justify-content: center;
+  }
+
+  .bio {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillGrid {
+    grid-template-columns: 1fr;
+  }
+}
