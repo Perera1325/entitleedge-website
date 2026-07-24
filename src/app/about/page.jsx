@@ -160,23 +160,7 @@ export default function AboutPage() {
                     ))}
                   </div>
 
-                  {/* Stats row */}
-                  <div className={teamStyles.statsRow}>
-                    <div className={teamStyles.stat}>
-                      <span className={teamStyles.statNum}>10+</span>
-                      <span className={teamStyles.statLabel}>Years Experience</span>
-                    </div>
-                    <div className={teamStyles.statDivider} />
-                    <div className={teamStyles.stat}>
-                      <span className={teamStyles.statNum}>MBA</span>
-                      <span className={teamStyles.statLabel}>+ BSc Qualified</span>
-                    </div>
-                    <div className={teamStyles.statDivider} />
-                    <div className={teamStyles.stat}>
-                      <span className={teamStyles.statNum}>Int&apos;l</span>
-                      <span className={teamStyles.statLabel}>Project Experience</span>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
