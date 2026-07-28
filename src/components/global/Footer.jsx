@@ -51,7 +51,7 @@ export default function Footer() {
           <div className={styles.footerCol}>
             <h4>Contact</h4>
             <ul className={styles.footerLinks}>
-              <li><a href="mailto:entitleedgeadvisory@gmail.com">entitleedgeadvisory@gmail.com</a></li>
+              <li><a href="mailto:info@entitleedgeadvisory.com">info@entitleedgeadvisory.com</a></li>
 
               <li><Link href="/contact">Book a Call</Link></li>
             </ul>

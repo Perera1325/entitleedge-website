@@ -138,7 +138,7 @@ export default function ContactForm() {
                 <div className={styles.infoCard}>
                   <h3 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Prefer to email?</h3>
                   <p style={{ color: 'var(--white)', marginBottom: '1rem' }}>
-                    entitleedgeadvisory@gmail.com
+                    <a href="mailto:info@entitleedgeadvisory.com" style={{ color: 'var(--accent)', textDecoration: 'none' }}>info@entitleedgeadvisory.com</a>
                   </p>
 
                   <p style={{ fontSize: '0.95rem' }}>

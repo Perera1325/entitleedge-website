@@ -154,7 +154,7 @@ export default function TermsOfServicePage() {
 
               <section id="contact" className={styles.legalSection}>
                 <h3>17. Contact</h3>
-                <p>Questions about these terms can be sent to: entitleedgeadvisory@gmail.com</p>
+                <p>Questions about these terms can be sent to: <a href="mailto:info@entitleedgeadvisory.com">info@entitleedgeadvisory.com</a></p>
               </section>
             </main>
           </div>

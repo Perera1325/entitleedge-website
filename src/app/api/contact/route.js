@@ -33,7 +33,9 @@ export async function POST(req) {
 
     // 2. Send Email
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.EMAIL_SMTP_HOST || 'mail.privateemail.com',
+      port: parseInt(process.env.EMAIL_SMTP_PORT || '465'),
+      secure: true, // SSL
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_APP_PASSWORD,
@@ -41,8 +43,8 @@ export async function POST(req) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'entitleedgeadvisory@gmail.com',
-      to: 'entitleedgeadvisory@gmail.com',
+      from: `"EntitleEdge Advisory" <${process.env.EMAIL_USER || 'info@entitleedgeadvisory.com'}>`,
+      to: process.env.EMAIL_TO || 'info@entitleedgeadvisory.com',
       subject: `New Enquiry from ${name} - ${supportType}`,
       html: `
         <h2>New Website Enquiry</h2>

@@ -151,7 +151,7 @@ export default function PrivacyPolicyPage() {
               <section id="complaints" className={styles.legalSection}>
                 <h3>12. Complaints and questions</h3>
                 <p>If you have a privacy question, concern or complaint, please contact us first using the details below. We will take your concern seriously and respond within a reasonable time.</p>
-                <p>Contact: entitleedgeadvisory@gmail.com</p>
+                <p>Contact: <a href="mailto:info@entitleedgeadvisory.com">info@entitleedgeadvisory.com</a></p>
                 <p>If you are not satisfied with our response, you may contact the relevant privacy regulator, such as the Office of the Australian Information Commissioner in Australia or the Office of the Privacy Commissioner in New Zealand.</p>
               </section>
 
