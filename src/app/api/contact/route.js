@@ -31,20 +31,26 @@ export async function POST(req) {
       // We continue to send the email even if DB fails, as email is the primary notification.
     }
 
-    // 2. Send Email
+    // 2. Send Email — Namecheap Private Email SMTP
+    const EMAIL_USER = process.env.EMAIL_USER || 'info@entitleedgeadvisory.com';
+    const EMAIL_PASS = process.env.EMAIL_APP_PASSWORD || 'EntitleEdge@2026!';
+    const EMAIL_HOST = process.env.EMAIL_SMTP_HOST || 'mail.privateemail.com';
+    const EMAIL_PORT = parseInt(process.env.EMAIL_SMTP_PORT || '465');
+    const EMAIL_TO   = process.env.EMAIL_TO || 'info@entitleedgeadvisory.com';
+
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_SMTP_HOST || 'mail.privateemail.com',
-      port: parseInt(process.env.EMAIL_SMTP_PORT || '465'),
-      secure: true, // SSL
+      host: EMAIL_HOST,
+      port: EMAIL_PORT,
+      secure: true, // SSL on port 465
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD,
+        user: EMAIL_USER,
+        pass: EMAIL_PASS,
       },
     });
 
     const mailOptions = {
-      from: `"EntitleEdge Advisory" <${process.env.EMAIL_USER || 'info@entitleedgeadvisory.com'}>`,
-      to: process.env.EMAIL_TO || 'info@entitleedgeadvisory.com',
+      from: `"EntitleEdge Advisory" <${EMAIL_USER}>`,
+      to: EMAIL_TO,
       subject: `New Enquiry from ${name} - ${supportType}`,
       html: `
         <h2>New Website Enquiry</h2>
@@ -59,17 +65,12 @@ export async function POST(req) {
       `,
     };
 
-    if (process.env.EMAIL_USER && process.env.EMAIL_APP_PASSWORD) {
-      try {
-        await transporter.sendMail(mailOptions);
-      } catch (emailError) {
-        console.error("Email failed to send:", emailError.message);
-      }
-      return NextResponse.json({ success: true, message: "Processed successfully", submission }, { status: 200 });
-    } else {
-      console.warn("Email credentials not set. Could not send email.");
-      return NextResponse.json({ success: true, message: "Database saved but email skipped (no credentials)", submission }, { status: 200 });
+    try {
+      await transporter.sendMail(mailOptions);
+    } catch (emailError) {
+      console.error("Email failed to send:", emailError.message);
     }
+    return NextResponse.json({ success: true, message: "Processed successfully", submission }, { status: 200 });
 
   } catch (error) {
     console.error('Contact form error:', error);
