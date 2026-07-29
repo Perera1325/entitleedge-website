@@ -96,9 +96,35 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div style={{ direction: 'ltr' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                    <div style={{ width: '40px', height: '3px', background: 'var(--accent)', borderRadius: '2px' }} />
-                    <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 700 }}>{svc.label}</span>
+                  <div style={{ marginBottom: '1.2rem' }}>
+                    <span style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      background: 'linear-gradient(135deg, rgba(217,154,43,0.12) 0%, rgba(217,154,43,0.06) 100%)',
+                      border: '1px solid rgba(217,154,43,0.35)',
+                      borderRadius: '100px',
+                      padding: '0.4rem 1rem 0.4rem 0.5rem',
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      letterSpacing: '2px',
+                      color: 'var(--accent)',
+                    }}>
+                      <span style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '22px',
+                        height: '22px',
+                        borderRadius: '50%',
+                        background: 'var(--accent)',
+                        color: '#fff',
+                        fontSize: '0.65rem',
+                        fontWeight: 800,
+                      }}>{String(idx + 1).padStart(2, '0')}</span>
+                      {svc.label}
+                    </span>
                   </div>
                   <h2 style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>{svc.title}</h2>
                   <ul style={{ listStyleType: 'none', paddingLeft: 0, marginBottom: '2rem' }}>
