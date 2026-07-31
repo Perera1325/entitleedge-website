@@ -48,7 +48,6 @@ export default function IndustriesPage() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <FadeIn>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
-              <div style={{ width: '40px', height: '3px', background: 'var(--accent)', borderRadius: '2px' }} />
               <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 700 }}>All Sectors</span>
             </div>
           </FadeIn>

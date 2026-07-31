@@ -48,14 +48,12 @@ export default function ProblemsPage() {
                   <div style={{ height: '1px', background: index % 2 === 0 ? 'rgba(217,154,43,0.2)' : 'rgba(11,31,51,0.08)', marginBottom: '1.25rem' }} />
                   <div style={{ marginBottom: '1.25rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-                      <div style={{ width: '12px', height: '2px', background: 'var(--accent)', borderRadius: '1px' }} />
                       <span style={{ color: 'var(--accent)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 700 }}>What Happens</span>
                     </div>
                     <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginBottom: 0 }}>{item.happens}</p>
                   </div>
                   <div style={{ marginTop: 'auto' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-                      <div style={{ width: '12px', height: '2px', background: 'var(--primary)', borderRadius: '1px' }} />
                       <span style={{ color: 'var(--primary)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: 700 }}>How We Help</span>
                     </div>
                     <p style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginBottom: 0 }}>{item.help}</p>
@@ -73,7 +71,6 @@ export default function ProblemsPage() {
           <FadeIn>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                <div style={{ width: '24px', height: '2px', background: 'var(--accent)', borderRadius: '1px' }} />
                 <span style={{ color: 'var(--accent)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 700 }}>Next Step</span>
               </div>
               <h3 style={{ margin: 0, color: 'var(--white)', textAlign: 'left', maxWidth: '500px' }}>If one of these sounds familiar, it is worth speaking to us.</h3>
