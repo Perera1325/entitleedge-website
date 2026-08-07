@@ -136,9 +136,15 @@ export default function ContactForm() {
             <div className="reveal3d" style={{ animationDelay: '0.2s' }}>
               <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} perspective={1000} transitionSpeed={1500} scale={1.02}>
                 <div className={styles.infoCard}>
-                  <h3 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Prefer to email?</h3>
+                  <h3 style={{ color: 'var(--white)', marginBottom: '1.5rem' }}>Contact Details</h3>
                   <p style={{ color: 'var(--white)', marginBottom: '1rem' }}>
                     <a href="mailto:info@entitleedgeadvisory.com" style={{ color: 'var(--accent)', textDecoration: 'none' }}>info@entitleedgeadvisory.com</a>
+                  </p>
+                  <p style={{ color: 'var(--white)', marginBottom: '1rem', fontSize: '0.95rem' }}>
+                    Southbank, Melbourne, Australia
+                  </p>
+                  <p style={{ color: 'var(--white)', marginBottom: '1rem' }}>
+                    <a href="https://www.linkedin.com/company/entitleedge-advisory/?viewAsMember=true" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none' }}>LinkedIn</a>
                   </p>
 
                   <p style={{ fontSize: '0.95rem' }}>

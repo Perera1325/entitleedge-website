@@ -52,7 +52,8 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul className={styles.footerLinks}>
               <li><a href="mailto:info@entitleedgeadvisory.com">info@entitleedgeadvisory.com</a></li>
-
+              <li style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', margin: '0.5rem 0' }}>Southbank, Melbourne, Australia</li>
+              <li><a href="https://www.linkedin.com/company/entitleedge-advisory/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><Link href="/contact">Book a Call</Link></li>
             </ul>
           </div>
