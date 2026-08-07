@@ -55,10 +55,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--accent)', fontWeight: 700, marginBottom: '2rem', fontSize: '0.875rem', letterSpacing: '2px', textTransform: 'uppercase' }}
+              style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(217, 154, 43, 0.1)', border: '1px solid var(--accent)', borderRadius: '50px', color: 'var(--accent)', fontWeight: 600, marginBottom: '1.5rem', fontSize: '0.875rem', letterSpacing: '1px', textTransform: 'uppercase' }}
             >
-              <div style={{ width: '30px', height: '2px', backgroundColor: 'var(--accent)' }}></div>
-              CAPABILITY STATEMENT
+              EntitleEdge Advisory
             </motion.div>
 
             {/* H1 */}
