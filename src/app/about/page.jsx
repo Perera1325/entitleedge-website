@@ -137,16 +137,9 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  {/* Divider */}
-                  <div className={teamStyles.divider} />
-
                   {/* About blurb */}
                   <p className={teamStyles.bio}>
-                    A highly experienced construction claims and project controls specialist with
-                    extensive international expertise in forensic delay analysis, EOT claim preparation
-                    and programme management. Chathura brings deep technical knowledge across civil,
-                    infrastructure and building projects — combining analytical rigour with practical
-                    commercial focus to protect contractor entitlement.
+                    Chathura is a seasoned construction claims and project controls specialist with extensive international experience. He specializes in forensic delay analysis, EOT claims, and programme management across civil, infrastructure, and building projects. Known for blending deep technical expertise with a practical, commercial mindset, Chathura is dedicated to protecting contractor entitlements and delivering clear, actionable results.
                   </p>
 
                   {/* Skill grid */}
