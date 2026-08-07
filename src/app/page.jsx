@@ -27,8 +27,27 @@ export default function Home() {
       <Section
         background="dark"
         className={styles.heroSection}
-        style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: 0, backgroundColor: 'var(--primary)' }}
+        style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: 0 }}
       >
+        <div ref={heroRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          {/* Parallax video background */}
+          <motion.div
+            style={{ scale: heroBgScale, y: heroBgY, position: 'absolute', inset: 0 }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+          {/* Premium Gradient Overlay */}
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(90deg, var(--primary) 0%, rgba(11, 31, 51, 0.85) 45%, rgba(11, 31, 51, 0.2) 100%)' }}></div>
+        </div>
+
         <div className="container" style={{ position: 'relative', zIndex: 1, padding: '8rem 2rem' }}>
           <div style={{ maxWidth: '850px' }}>
             {/* Badge */}
