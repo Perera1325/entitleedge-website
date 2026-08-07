@@ -27,27 +27,8 @@ export default function Home() {
       <Section
         background="dark"
         className={styles.heroSection}
-        style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: 0 }}
+        style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: 0, backgroundColor: 'var(--primary)' }}
       >
-        <div ref={heroRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-          {/* Parallax video background */}
-          <motion.div
-            style={{ scale: heroBgScale, y: heroBgY, position: 'absolute', inset: 0 }}
-          >
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            >
-              <source src="/hero-video.mp4" type="video/mp4" />
-            </video>
-          </motion.div>
-          {/* Premium Gradient Overlay */}
-          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(90deg, var(--primary) 0%, rgba(11, 31, 51, 0.85) 45%, rgba(11, 31, 51, 0.2) 100%)' }}></div>
-        </div>
-
         <div className="container" style={{ position: 'relative', zIndex: 1, padding: '8rem 2rem' }}>
           <div style={{ maxWidth: '850px' }}>
             {/* Badge */}
@@ -55,9 +36,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(217, 154, 43, 0.1)', border: '1px solid var(--accent)', borderRadius: '50px', color: 'var(--accent)', fontWeight: 600, marginBottom: '1.5rem', fontSize: '0.875rem', letterSpacing: '1px', textTransform: 'uppercase' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--accent)', fontWeight: 700, marginBottom: '2rem', fontSize: '0.875rem', letterSpacing: '2px', textTransform: 'uppercase' }}
             >
-              EntitleEdge Advisory
+              <div style={{ width: '30px', height: '2px', backgroundColor: 'var(--accent)' }}></div>
+              CAPABILITY STATEMENT
             </motion.div>
 
             {/* H1 */}
@@ -65,9 +47,12 @@ export default function Home() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.52, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              style={{ marginBottom: '1.5rem', color: 'var(--white)', fontSize: 'clamp(3rem, 6vw, 4.5rem)', lineHeight: 1.1, textShadow: '0 4px 12px rgba(0,0,0,0.3)' }}
+              style={{ marginBottom: '2rem', color: 'var(--white)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, textShadow: '0 4px 12px rgba(0,0,0,0.3)' }}
             >
-              Project Controls, Planning &amp; Claims Support <span style={{ color: 'var(--accent)' }}>for Contractors</span>
+              Project Planning<br />
+              Monitoring and Control<br />
+              Claims Support<br />
+              <span style={{ color: 'var(--accent)' }}>Sound Contract Administration</span>
             </motion.h1>
 
             {/* Accent subline */}
@@ -75,9 +60,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.32, ease: [0.25, 0.46, 0.45, 0.94] }}
-              style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem)', fontWeight: 600, color: 'var(--accent)', marginBottom: '1.5rem', letterSpacing: '0.5px' }}
+              style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', fontWeight: 600, color: 'var(--accent)', marginBottom: '1.5rem', letterSpacing: '0.5px' }}
             >
-              Protect your programme. Protect your entitlement. Protect your profit.
+              Build your schedule. Preserve your entitlement. Secure your profit.
             </motion.p>
 
             {/* Body copy */}
@@ -87,7 +72,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.42, ease: [0.25, 0.46, 0.45, 0.94] }}
               style={{ fontSize: '1.125rem', marginBottom: '3rem', color: 'rgba(255,255,255,0.9)', maxWidth: '700px', lineHeight: 1.6 }}
             >
-              We help civil, infrastructure and construction contractors maintain stronger programmes, track delays, protect EOT entitlement and improve commercial outcomes - without the cost of a full-time planner or claims team.
+              EntitleEdge supports civil, infrastructure and construction contractors with practical project planning, monitoring and control, claims support and contract administration. We strengthen schedules, records and commercial outcomes without the cost of a full-time specialist.
             </motion.p>
 
             {/* CTA buttons */}
