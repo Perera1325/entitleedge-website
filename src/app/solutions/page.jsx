@@ -9,7 +9,7 @@ import styles from '../page.module.css';
 
 export const metadata = {
   title: "EOT Claims, Delay Tracking & Programme Support for Contractors",
-  description: "Common project problems we help contractors solve. Most programme and claim issues become expensive because they are not tracked early enough.",
+  description: "Common project solutions we help contractors implement. Most programme and claim issues become expensive because they are not tracked early enough.",
 };
 
 const problems = [
@@ -21,12 +21,12 @@ const problems = [
   { problem: "Our reporting is not good enough.", happens: "Clients and internal leadership want clearer reporting than the project team can produce.", help: "Progress dashboards, executive reports, S-curves, KPIs and monthly reporting.", icon: "📊", number: "06" },
 ];
 
-export default function ProblemsPage() {
+export default function SolutionsPage() {
   return (
     <>
       <PageHero
         badge="Sound Familiar?"
-        title="Common project problems we help contractors solve."
+        title="Common project solutions we help contractors implement."
         subtitle="Most programme and claim issues become expensive because they are not tracked early enough. Build the evidence before it is too late."
         extra={
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'repeating-linear-gradient(45deg, rgba(217,154,43,0.02) 0px, rgba(217,154,43,0.02) 2px, transparent 2px, transparent 40px)', pointerEvents: 'none' }} />
