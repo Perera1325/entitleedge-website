@@ -68,7 +68,7 @@ export default function AboutPage() {
             }}>
               <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', background: 'rgba(217,154,43,0.08)', animation: 'orbFloat1 10s ease-in-out infinite' }} />
               <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.95)', marginBottom: 0, lineHeight: 1.7, position: 'relative', zIndex: 1 }}>
-                &ldquo;Our work is practical, evidence-based and commercially focused. We help project teams maintain stronger programmes, better records and clearer reporting — so they are better prepared when delays, variations and claims arise.&rdquo;
+                We take a practical, commercial approach to project controls. By helping teams build stronger programmes and keep better records, we make sure you are always prepared to handle delays, variations, and claims.
               </p>
             </div>
           </FadeIn>
